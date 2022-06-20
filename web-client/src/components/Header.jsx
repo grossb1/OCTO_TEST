@@ -34,8 +34,12 @@ function Header() {
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
             <Button
+<<<<<<< HEAD:web-client/src/components/Header.jsx
               component={Link}
               to={page.path}
+=======
+              href={page.path}
+>>>>>>> feat(DEV-798): Added routing to top nav:src/components/header.jsx
               color="inherit"
               key={page.name}
               xs={{ my: 2, color: 'white', display: 'block' }}
