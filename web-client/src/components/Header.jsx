@@ -7,9 +7,13 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 <<<<<<< HEAD:web-client/src/components/Header.jsx
+<<<<<<< HEAD:web-client/src/components/Header.jsx
 import PersonIcon from '@mui/icons-material/Person';
 =======
 >>>>>>> feat(DEV-798): added mock web api:src/components/Header.jsx
+=======
+import PersonIcon from '@mui/icons-material/Person';
+>>>>>>> feat(DEV-798): added person icon and some style changes:src/components/Header.jsx
 import { Link } from 'react-router-dom';
 
 const pages = [
