@@ -6,7 +6,10 @@ import ToolBar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+<<<<<<< HEAD:web-client/src/components/Header.jsx
 import PersonIcon from '@mui/icons-material/Person';
+=======
+>>>>>>> feat(DEV-798): added mock web api:src/components/Header.jsx
 import { Link } from 'react-router-dom';
 
 const pages = [
@@ -35,11 +38,16 @@ function Header() {
           {pages.map((page) => (
             <Button
 <<<<<<< HEAD:web-client/src/components/Header.jsx
+<<<<<<< HEAD:web-client/src/components/Header.jsx
               component={Link}
               to={page.path}
 =======
               href={page.path}
 >>>>>>> feat(DEV-798): Added routing to top nav:src/components/header.jsx
+=======
+              component={Link}
+              to={page.path}
+>>>>>>> feat(DEV-798): added mock web api:src/components/Header.jsx
               color="inherit"
               key={page.name}
               xs={{ my: 2, color: 'white', display: 'block' }}

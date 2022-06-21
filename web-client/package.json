@@ -3,10 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
+<<<<<<< HEAD:web-client/package.json
     "start": "npm run dev & npm run start:api",
     "prestart:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
     "dev": "vite --host",
+=======
+    "start":"npm run dev & npm run start:api",
+    "prestart:api":"node tools/createMockDb.js",
+    "start:api":"node tools/apiServer.js",
+    "dev": "vite",
+>>>>>>> feat(DEV-798): added mock web api:package.json
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -17,8 +24,11 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
 <<<<<<< HEAD:web-client/package.json
+<<<<<<< HEAD:web-client/package.json
     "@mui/x-data-grid": "^5.12.2",
     "axios": "^0.27.2",
+=======
+>>>>>>> feat(DEV-798): added mock web api:package.json
     "json-server": "^0.17.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
