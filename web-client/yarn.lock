@@ -675,6 +675,7 @@
 
 <<<<<<< HEAD:web-client/yarn.lock
 <<<<<<< HEAD:web-client/yarn.lock
+<<<<<<< HEAD:web-client/yarn.lock
 "@mui/utils@^5.4.1", "@mui/utils@^5.8.4":
   version "5.8.4"
   resolved "https://registry.npmjs.org/@mui/utils/-/utils-5.8.4.tgz"
@@ -687,6 +688,9 @@
   "version" "5.8.4"
 >>>>>>> feat(DEV-798): added mock web api:yarn.lock
 =======
+=======
+"@mui/utils@^5.4.1", "@mui/utils@^5.8.4":
+>>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:yarn.lock
 =======
 "@mui/utils@^5.4.1", "@mui/utils@^5.8.4":
 >>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:yarn.lock

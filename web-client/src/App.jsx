@@ -22,7 +22,10 @@ function App() {
         </Routes>
       </Container>
 <<<<<<< HEAD:web-client/src/App.jsx
+<<<<<<< HEAD:web-client/src/App.jsx
       <ManualRolesSelect />
+=======
+>>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:src/App.jsx
 =======
 >>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:src/App.jsx
     </>
