@@ -133,6 +133,10 @@ function DynamicDataGrid(props) {
   return (
     <Box
       sx={{
+<<<<<<< HEAD:web-client/src/components/DynamicDataGrid.jsx
+=======
+        height: 300,
+>>>>>>> feat(DEV-798): add announcments component, progress component and alert component to dashboard:src/components/DynamicDataGrid.jsx
         width: '100%',
         '& .super-app-theme--header': {
           backgroundColor: 'rgba(211,211,211, 0.55)',
@@ -144,6 +148,11 @@ function DynamicDataGrid(props) {
           getRowId={uniqueID}
           rows={rows}
           columns={columnsStyled}
+<<<<<<< HEAD:web-client/src/components/DynamicDataGrid.jsx
+=======
+          rowsPerPageOptions={[25]}
+          checkboxSelection
+>>>>>>> feat(DEV-798): add announcments component, progress component and alert component to dashboard:src/components/DynamicDataGrid.jsx
           disableSelectionOnClick
         />
       </div>
