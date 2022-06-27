@@ -32,6 +32,9 @@
 <<<<<<< HEAD:web-client/package.json
 <<<<<<< HEAD:web-client/package.json
 <<<<<<< HEAD:web-client/package.json
+<<<<<<< HEAD:web-client/package.json
+=======
+>>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:package.json
     "@mui/x-data-grid": "^5.12.2",
     "axios": "^0.27.2",
 =======

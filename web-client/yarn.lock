@@ -674,6 +674,7 @@
   integrity sha512-uveM3byMbthO+6tXZ1n2zm0W3uJCQYtwt/v5zV5I77v2v18u0ITkb8xwhsDD2i3V2Kye7SaNR6FFJ6lMuY/WqQ==
 
 <<<<<<< HEAD:web-client/yarn.lock
+<<<<<<< HEAD:web-client/yarn.lock
 "@mui/utils@^5.4.1", "@mui/utils@^5.8.4":
   version "5.8.4"
   resolved "https://registry.npmjs.org/@mui/utils/-/utils-5.8.4.tgz"
@@ -686,6 +687,9 @@
   "version" "5.8.4"
 >>>>>>> feat(DEV-798): added mock web api:yarn.lock
 =======
+=======
+"@mui/utils@^5.4.1", "@mui/utils@^5.8.4":
+>>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:yarn.lock
   version "5.8.4"
   resolved "https://registry.npmjs.org/@mui/utils/-/utils-5.8.4.tgz"
   integrity sha512-BHYErfrjqqh76KaDAm8wZlhEip1Uj7Cmco65NcsF3BWrAl3FWngACpaPZeEbTgmaEwyWAQEE6LZhsmy43hfyqQ==
@@ -7099,6 +7103,11 @@ require-directory@^2.1.1:
   version "2.1.1"
   resolved "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz"
   integrity sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==
+
+reselect@^4.1.5:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.1.6.tgz#19ca2d3d0b35373a74dc1c98692cdaffb6602656"
+  integrity sha512-ZovIuXqto7elwnxyXbBtCPo9YFEr3uJqj2rRbcOOog1bmu2Ag85M4hixSwFWyaBMKXNgvPaJ9OSu9SkBPIeJHQ==
 
 resolve-from@^4.0.0:
   version "4.0.0"
