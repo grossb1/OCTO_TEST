@@ -73,11 +73,7 @@ function Dashboard() {
 
   const rows = query.data;
 
-<<<<<<< HEAD:web-client/src/pages/Dashboard.jsx
   const uniqueID = (row) => row.guid;
-=======
-  const uniqueID = (row) => row.GUID;
->>>>>>> feat(DEV-798): add ManualRolesSelect component:src/pages/Dashboard.jsx
   const announcement = 'Auto populated with a message about down time if any of the Lib tables used populate it is null or XLA cannot connect to SQL 20 otherwise blank.';
   return (
     <>
