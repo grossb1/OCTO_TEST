@@ -6,7 +6,7 @@
     "start": "npm run dev & npm run start:api",
     "prestart:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install"
