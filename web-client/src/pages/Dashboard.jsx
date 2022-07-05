@@ -11,7 +11,7 @@ import DynamicDataGrid from '../components/DynamicDataGrid';
 import QueryTemplate from '../utility/Query';
 
 const get = async () => {
-  const { data } = await axios.get('http://localhost:3001/allsets');
+  const { data } = await axios.get('http://localhost:5117/allsets');
   return data;
 };
 
@@ -43,7 +43,7 @@ function Dashboard() {
   // example of manually setting column header
   const columns = [
     {
-      field: 'GUID', headerName: 'GUID', width: 150, hideable: false,
+      field: 'guid', headerName: 'GUID', width: 150, hideable: false,
     },
     {
       field: 'setTerm', headerName: 'Set Term', width: 150, hideable: false,
@@ -58,7 +58,7 @@ function Dashboard() {
       field: 'reviewer', headerName: 'Reviewer', width: 150, hideable: false,
     },
     {
-      field: 'SME', headerName: 'SME', width: 150, hideable: false,
+      field: 'sme', headerName: 'SME', width: 150, hideable: false,
     },
     {
       field: 'organization', headerName: 'Organization', width: 150, hideable: false,
@@ -73,7 +73,7 @@ function Dashboard() {
 
   const rows = query.data;
 
-  const uniqueID = (row) => row.GUID;
+  const uniqueID = (row) => row.guid;
   const announcement = 'Auto populated with a message about down time if any of the Lib tables used populate it is null or XLA cannot connect to SQL 20 otherwise blank.';
   return (
     <>
