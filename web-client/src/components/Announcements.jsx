@@ -3,8 +3,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import PropTypes from 'prop-types';
 
-function Announcements(props) {
-  const { announcement } = props;
+function Announcements({ announcement }) {
   return (
     <Paper
       elevation={3}

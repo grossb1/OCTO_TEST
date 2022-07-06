@@ -95,6 +95,7 @@ const allSets = [
     organization: 'PERC',
     description: 'Depression',
     status: 'Working',
+    domain: 'Diagnosis',
   },
   {
     GUID: 1002,
@@ -106,6 +107,7 @@ const allSets = [
     organization: 'SMITREC',
     description: 'CLC',
     status: 'Development',
+    domain: 'Treatment Location',
   },
   {
     GUID: 1003,
@@ -117,6 +119,7 @@ const allSets = [
     organization: 'NEPEC',
     description: 'Codes for depression per elix hauser',
     status: 'Validated',
+    domain: '',
   },
   {
     GUID: 1004,
@@ -128,13 +131,33 @@ const allSets = [
     organization: 'PERC',
     description: 'Possible something from the Ira files',
     status: 'Production',
+    domain: 'Treatment Location',
   },
 ];
 
+const roles = [
+  {
+    roleName: 'Guest',
+    permissions: ['Dashboard ReadOnly', 'Library Module Read Only'],
+  },
+  {
+    roleName: 'Librarian', permissions: ['Dashboard Edit'],
+  },
+  {
+    roleName: 'Analyst', permissions: ['Dashboard Edit'],
+  },
+  {
+    roleName: 'Contributor', permissions: ['Dashboard Edit'],
+  },
+  {
+    roleName: 'SME', permissions: ['Dashboard Edit'],
+  },
+];
 // Using CommonJS style export so we can consume via Node (without using Babel-node)
 module.exports = {
   newCourse,
   courses,
   authors,
   allSets,
+  roles,
 };
