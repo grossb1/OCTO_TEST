@@ -3,23 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-<<<<<<< HEAD:web-client/package.json
-<<<<<<< HEAD:web-client/package.json
     "start": "npm run dev & npm run start:api",
     "prestart:api": "node tools/createMockDb.js",
     "start:api": "node tools/apiServer.js",
-    "dev": "vite --host",
-=======
-    "start":"npm run dev & npm run start:api",
-    "prestart:api":"node tools/createMockDb.js",
-    "start:api":"node tools/apiServer.js",
-=======
-    "start": "npm run dev & npm run start:api",
-    "prestart:api": "node tools/createMockDb.js",
-    "start:api": "node tools/apiServer.js",
->>>>>>> feat(DEV-798): added react query:package.json
     "dev": "vite",
->>>>>>> feat(DEV-798): added mock web api:package.json
     "build": "vite build",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -29,16 +16,8 @@
     "@emotion/styled": "^11.9.3",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.8.4",
-<<<<<<< HEAD:web-client/package.json
-<<<<<<< HEAD:web-client/package.json
-<<<<<<< HEAD:web-client/package.json
-<<<<<<< HEAD:web-client/package.json
-=======
->>>>>>> feat(DEV-789): added DynamicDataGrid component to Dashboard:package.json
     "@mui/x-data-grid": "^5.12.2",
     "axios": "^0.27.2",
-=======
->>>>>>> feat(DEV-798): added mock web api:package.json
     "json-server": "^0.17.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -46,23 +25,6 @@
     "react-query": "^3.39.1",
     "react-router-dom": "6",
     "styled-components": "^5.3.5"
-=======
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-<<<<<<< HEAD:web-client/package.json
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
->>>>>>> feat(DEV-798): added mui and header:package.json
-=======
-=======
-    "axios": "^0.27.2",
-    "json-server": "^0.17.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-query": "^3.39.1",
->>>>>>> feat(DEV-798): added react query:package.json
-    "react-router-dom": "6"
->>>>>>> feat(DEV-798): Added routing to top nav:package.json
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
