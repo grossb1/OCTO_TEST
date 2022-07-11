@@ -12,7 +12,7 @@ public class AllSetsController : ControllerBase
         new AllSets 
         {
             GUID = 1001,
-            SetTerm = "Depression",
+            SetTerm = "Depression2",
             SetType = "Value Set",
             Creator = "Cora Bernard",
             Reviewer = "Jodie Trafton",

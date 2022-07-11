@@ -13,7 +13,7 @@ import NewSetMenuButton from '../components/NewSetMenuButton';
 import QueryTemplate from '../utility/Query';
 
 const get = async () => {
-  const { data } = await axios.get('http://localhost:3001/allsets');
+  const { data } = await axios.get('http://localhost:5117/allsets');
   return data;
 };
 
@@ -60,9 +60,6 @@ function Dashboard() {
     {
       field: 'status', headerName: 'Status', width: 200,
     },
-    {
-      field: 'domain', headerName: 'Domain', width: 200,
-    },
   ];
 
   role.permissions.map((p) => {
@@ -79,7 +76,7 @@ function Dashboard() {
 
   const rows = query.data;
 
-  const uniqueID = (row) => row.GUID;
+  const uniqueID = (row) => row.guid;
   const announcement = 'Auto populated with a message about down time if any of the Lib tables used populate it is null or XLA cannot connect to SQL 20 otherwise blank.';
 
   return (

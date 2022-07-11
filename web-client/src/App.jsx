@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Container from '@mui/material/Container';
@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
 import NotFound from './pages/NotFound';
 import LibraryModule from './pages/LibraryModule';
-import Vocabulary from './pages/Vocabulary';
+import CodeSet from './pages/CodeSet';
 import ManualRolesSelect from './components/ManualRolesSelect';
 import GlobalContext from './contexts/GlobalContext';
 
@@ -17,16 +17,19 @@ function App() {
     permissions: ['Dashboard ReadOnly', 'Library Module Read Only'],
   });
 
+  const value = useMemo(() => ({
+    role, setRole,
+  }), [role]);
+
   return (
-    // eslint-disable-next-line react/jsx-no-constructed-context-values
-    <GlobalContext.Provider value={{ role, setRole }}>
+    <GlobalContext.Provider value={value}>
       <Header />
       <Container maxWidth="xl" sx={{ marginY: 5 }}>
         <Routes>
           <Route path="/" exact element={<Dashboard />} />
           <Route path="/dataset" element={<DatasetModule />} />
           <Route path="/library" element={<LibraryModule />} />
-          <Route path="/vocabulary" element={<Vocabulary />} />
+          <Route path="/codeset" element={<CodeSet />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>

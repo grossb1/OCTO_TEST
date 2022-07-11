@@ -208,19 +208,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/bradgross/.nuget/packages/": {}
+    "/home/jandrews/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bradgross/dev/va/OCTO_TEST/web-api/web-api.csproj",
+      "projectUniqueName": "/home/jandrews/dev/OCTO_TEST/web-api/web-api.csproj",
       "projectName": "web-api",
-      "projectPath": "/Users/bradgross/dev/va/OCTO_TEST/web-api/web-api.csproj",
-      "packagesPath": "/Users/bradgross/.nuget/packages/",
-      "outputPath": "/Users/bradgross/dev/va/OCTO_TEST/web-api/obj/",
+      "projectPath": "/home/jandrews/dev/OCTO_TEST/web-api/web-api.csproj",
+      "packagesPath": "/home/jandrews/.nuget/packages/",
+      "outputPath": "/home/jandrews/dev/OCTO_TEST/web-api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/bradgross/.nuget/NuGet/NuGet.Config"
+        "/home/jandrews/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -267,7 +267,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
       }
     }
   }
