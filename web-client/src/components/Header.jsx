@@ -9,27 +9,25 @@ import MenuIcon from '@mui/icons-material/Menu';
 import PersonIcon from '@mui/icons-material/Person';
 import { Link } from 'react-router-dom';
 
+// const pages = [
+//   { name: 'Dashboard', path: '/' },
+//   { name: 'Library Module', path: '/library' },
+//   { name: 'Dataset Module', path: '/dataset' },
+// ];
+
 const pages = [
-  { name: 'Dashboard', path: '/' },
-  { name: 'Library Module', path: '/library' },
-  { name: 'Dataset Module', path: '/dataset' },
+  { name: 'Permissions', path: '/permissions' },
+  { name: 'Compare', path: '/compare' },
+  { name: 'About', path: '/about' },
 ];
 
 function Header() {
+
   return (
     <AppBar position="static">
       <ToolBar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          sx={{ mr: 2 }}
-        >
-          <MenuIcon />
-        </IconButton>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          XLA
+          ALEX
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
@@ -38,14 +36,28 @@ function Header() {
               to={page.path}
               color="inherit"
               key={page.name}
-              xs={{ my: 2, color: 'white', display: 'block' }}
+              xs={{ color: 'white', display: 'block' }}
             >
               {page.name}
             </Button>
           ))}
         </Box>
+        <Button
+          component={Link}
+          to="/dashboard"
+          color="inherit"
+        >
+          ALEX
 
-        <Button color="inherit">Login</Button>
+        </Button>
+        <Button
+          component={Link}
+          to="/login"
+          color="inherit"
+        >
+          Login
+
+        </Button>
         <PersonIcon />
       </ToolBar>
     </AppBar>
