@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid, gridClasses } from '@mui/x-data-grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
@@ -122,9 +122,7 @@ renderCellExpand.propTypes = {
   value: PropTypes.string,
 };
 
-function DynamicDataGrid(props) {
-  const { rows, columns, uniqueID } = props;
-  // // setting column header as the field name
+function DynamicDataGrid({ rows, columns, uniqueID }) {
   const columnsStyled = [];
   columns.map((col) => columnsStyled.push({
     headerClassName: 'super-app-theme--header', renderCell: renderCellExpand, ...col,
@@ -133,19 +131,29 @@ function DynamicDataGrid(props) {
   return (
     <Box
       sx={{
-        width: '100%',
         '& .super-app-theme--header': {
           backgroundColor: 'rgba(211,211,211, 0.55)',
         },
       }}
     >
-      <div style={{ height: 500, width: '100%' }}>
-        <DataGrid
-          getRowId={uniqueID}
-          rows={rows}
-          columns={columnsStyled}
-          disableSelectionOnClick
-        />
+      <div style={{ height: 400 }}>
+        <div style={{ display: 'flex', height: '100%' }}>
+          <DataGrid
+            getRowId={uniqueID}
+            rows={rows}
+            columns={columnsStyled}
+            disableSelectionOnClick
+            getRowHeight={() => 'auto'}
+            sx={{
+              [`& .${gridClasses.cell}`]: {
+                py: 1,
+              },
+            }}
+            onCellClick={(params) => {
+              alert(`Go to page for for row ${JSON.stringify(params.row)}`);
+            }}
+          />
+        </div>
       </div>
     </Box>
   );
