@@ -105,11 +105,8 @@ GridCellExpand.propTypes = {
   value: PropTypes.string.isRequired,
   width: PropTypes.number.isRequired,
 };
-function renderCellExpand(params) {
-  return (
-    <GridCellExpand value={params.value.toString() || ''} width={params.colDef.computedWidth} />
-  );
-}
+
+const renderCellExpand = ({ value, colDef: { computedWidth } }) => <GridCellExpand value={value.toString() || ''} width={computedWidth} />;
 
 renderCellExpand.propTypes = {
   /**
