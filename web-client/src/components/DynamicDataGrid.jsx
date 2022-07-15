@@ -121,9 +121,19 @@ renderCellExpand.propTypes = {
 
 function DynamicDataGrid({ rows, columns, uniqueID }) {
   const columnsStyled = [];
-  columns.map((col) => columnsStyled.push({
-    headerClassName: 'super-app-theme--header', renderCell: renderCellExpand, ...col,
-  }));
+  let width = 0;
+  columns.forEach((col) => {
+    columnsStyled.push({
+      headerClassName: 'super-app-theme--header', renderCell: renderCellExpand, ...col,
+    });
+
+    if (col.width) {
+      width += col.width;
+    }
+  });
+
+  // fix width
+  if (width > 1000) { width = '100%'; }
 
   return (
     <Box
@@ -133,7 +143,7 @@ function DynamicDataGrid({ rows, columns, uniqueID }) {
         },
       }}
     >
-      <div style={{ height: 400 }}>
+      <div style={{ height: 400, width }}>
         <div style={{ display: 'flex', height: '100%' }}>
           <DataGrid
             getRowId={uniqueID}

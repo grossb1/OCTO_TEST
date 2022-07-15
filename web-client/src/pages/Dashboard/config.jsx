@@ -1,17 +1,50 @@
+/* eslint-disable react/prop-types */
+import React from 'react';
+import CellDetails from './CellDetails';
+
 export default [
   {
-    field: 'setTerm', headerName: 'Set Term', width: 200,
+    accessorKey: 'guid',
+    header: 'GUID',
   },
   {
-    field: 'setType', headerName: 'Set Type', width: 200,
+    accessorKey: 'datasetType',
+    header: 'datasetType',
   },
   {
-    field: 'organization', headerName: 'Organization', width: 200,
+    accessorKey: 'setTerm',
+    header: 'Name',
+    Cell: ({ cell }) => (
+      <CellDetails cell={cell} />
+    ),
   },
   {
-    field: 'description', headerName: 'Description', width: 200,
+    accessorKey: 'domain',
+    header: 'Domain',
+    Cell: ({ cell }) => (
+      <CellDetails cell={cell} />
+    ),
   },
   {
-    field: 'status', headerName: 'Status', width: 200,
+    accessorKey: 'description',
+    header: 'Description',
+    width: 500,
+    Cell: ({ cell }) => (
+      <CellDetails cell={cell} />
+    ),
+  },
+  {
+    accessorKey: 'status',
+    header: 'Status',
+    Cell: ({ cell }) => (
+      <CellDetails cell={cell} />
+    ),
+  },
+  {
+    accessorKey: 'organization',
+    header: 'Organization',
+    Cell: ({ cell }) => (
+      <CellDetails cell={cell} />
+    ),
   },
 ];

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import { useQuery } from 'react-query';
 import Box from '@mui/material/Box';
@@ -8,20 +8,21 @@ import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 import GlobalContext from '../contexts/GlobalContext';
 
-const get = async () => {
-  const { data } = await axios.get('http://localhost:3001/roles');
-  return data;
-};
-
 function ManualRolesSelect() {
-  const query = useQuery('roles', get);
   const { role, setRole } = useContext(GlobalContext);
+  const [roles, setRoles] = useState([]);
 
-  const roles = query.data;
+  const get = async () => {
+    await axios.get('http://localhost:5117/roles').then((resp) => {
+      setRoles(resp.data);
+    });
+  };
+
+  useQuery('roles', get);
 
   const handleChange = (event) => {
-    const selectedRoleName = event.target.value;
-    setRole(roles.find((r) => r.roleName === selectedRoleName));
+    const selectedRoleID = event.target.value;
+    setRole(roles.find((r) => r.roleID === selectedRoleID));
   };
 
   return (
@@ -34,22 +35,21 @@ function ManualRolesSelect() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={role.roleName}
+          value={role.roleID}
           label="Role"
           sx={{ fontSize: 'small' }}
           onChange={(event) => { handleChange(event); }}
         >
-          <MenuItem value="Guest">Guest</MenuItem>
-          <MenuItem value="Librarian">Librarian</MenuItem>
-          <MenuItem value="Analyst">Analyst</MenuItem>
-          <MenuItem value="Contributor">Contributor</MenuItem>
-          <MenuItem value="SME">Subject Matter Expert</MenuItem>
+          {
+          roles
+          && roles.map((r) => <MenuItem key={r.roleID} value={r.roleID}>{r.roleName}</MenuItem>)
+          }
         </Select>
       </Box>
       <Box sx={{ minWidth: 120, marginLeft: 3, fontSize: 'small' }}>
         <Typography variant="body2" component="h1">
           Permissions:
-          {role.permissions.map((p) => <li key={p}>{p}</li>)}
+          { role.permissions.map((p) => <li key={p.permissionID}>{p.permissionName}</li>) }
         </Typography>
       </Box>
     </Box>

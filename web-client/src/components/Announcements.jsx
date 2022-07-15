@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import PropTypes from 'prop-types';
 
-function Announcements({ announcement }) {
+function Announcements({ announcements }) {
   return (
     <Paper
       elevation={3}
@@ -16,15 +16,17 @@ function Announcements({ announcement }) {
       }}
     >
       <Typography variant="h6" component="h6" sx={{ textAlign: 'center', color: 'blue', marginBottom: 1 }}>Announcements</Typography>
-      <Typography variant="h6" component="h6" sx={{ textAlign: 'left', color: 'gray' }}>{ announcement }</Typography>
+      {announcements.map((announcement) => (
+        <Typography variant="h6" component="h6" key={announcement.announcementID} sx={{ textAlign: 'left', color: 'gray' }}>{ announcement.message }</Typography>
+      ))}
     </Paper>
   );
 }
 
 Announcements.propTypes = {
-  announcement: PropTypes.string,
+  announcements: PropTypes.array,
 };
 Announcements.defaultProps = {
-  announcement: '',
+  announcements: [],
 };
 export default Announcements;

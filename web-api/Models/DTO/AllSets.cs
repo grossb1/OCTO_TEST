@@ -12,4 +12,6 @@ public class AllSets
     public string? Organization { get; set; }
     public string? Description { get; set; }
     public string? Status { get; set; }
+    public string? Domain { get; set; }
+    public bool? Favorite  { get; set; }
 }

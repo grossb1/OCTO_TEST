@@ -1,47 +1,44 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import ToolBar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
-import PersonIcon from '@mui/icons-material/Person';
+import HomeIcon from '@mui/icons-material/Home';
+import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-
-// const pages = [
-//   { name: 'Dashboard', path: '/' },
-//   { name: 'Library Module', path: '/library' },
-//   { name: 'Dataset Module', path: '/dataset' },
-// ];
-
-const pages = [
-  { name: 'Permissions', path: '/permissions' },
-  { name: 'Compare', path: '/compare' },
-  { name: 'About', path: '/about' },
-];
+import MenuButton from './MenuButton';
+import GlobalContext from '../contexts/GlobalContext';
 
 function Header() {
+  const { role } = useContext(GlobalContext);
+
+  const mainMenuItems = [];
+  const aboutMenuItems = [
+    { menuItemName: 'About ALEX', path: '/aboutalex' },
+    { menuItemName: 'FAQ', path: '/faq' },
+    { menuItemName: 'User Guide', path: '/userguide' },
+  ];
+  role.permissions.map((p) => {
+    if (p.permissionID === 3) {
+      mainMenuItems.push({ menuItemName: 'Permissions', path: '/permissions' });
+      mainMenuItems.push({ menuItemName: 'Compare', path: '/compare' });
+    }
+    return p;
+  });
 
   return (
     <AppBar position="static">
       <ToolBar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          ALEX
-        </Typography>
-        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          {pages.map((page) => (
-            <Button
-              component={Link}
-              to={page.path}
-              color="inherit"
-              key={page.name}
-              xs={{ color: 'white', display: 'block' }}
-            >
-              {page.name}
-            </Button>
-          ))}
-        </Box>
+        <IconButton
+          component={Link}
+          to="/dashboard"
+          size="large"
+          edge="end"
+          color="inherit"
+        >
+          <HomeIcon />
+        </IconButton>
         <Button
           component={Link}
           to="/dashboard"
@@ -50,15 +47,26 @@ function Header() {
           ALEX
 
         </Button>
-        <Button
-          component={Link}
-          to="/login"
-          color="inherit"
-        >
-          Login
-
-        </Button>
-        <PersonIcon />
+        <MenuButton menuButtonName="About" menuItems={aboutMenuItems} variant="" />
+        <Box sx={{ flexGrow: 1 }}>
+          {mainMenuItems.map((item) => (
+            <Button
+              component={Link}
+              to={item.path}
+              color="inherit"
+              key={item.menuItemName}
+              xs={{ color: 'white', display: 'block' }}
+            >
+              {item.menuItemName}
+            </Button>
+          ))}
+        </Box>
+        <Typography>
+          Hi
+          {' '}
+          {role.roleName}
+          !
+        </Typography>
       </ToolBar>
     </AppBar>
   );
