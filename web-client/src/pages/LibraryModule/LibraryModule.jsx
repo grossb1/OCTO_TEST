@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactFlowCanvas from '../components/ReactFlowCanvas';
+import ReactFlowCanvas from '../../components/ReactFlowCanvas';
 
 function LibraryModule() {
   const nodes = [

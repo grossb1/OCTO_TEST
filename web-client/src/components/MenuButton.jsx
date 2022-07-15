@@ -3,9 +3,12 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function NewSetMenuButton() {
+function MenuButton({ menuButtonName, menuItems, variant }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const navigate = useNavigate();
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -16,20 +19,20 @@ function NewSetMenuButton() {
 
   function handleRedirect(page) {
     setAnchorEl(null);
-    alert(`Go to page to add new ${page}`);
+    navigate(page);
   }
 
   return (
     <>
       <Button
-        variant="contained"
+        variant={variant}
         id="fade-button"
         aria-controls={open ? 'fade-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        New
+        { menuButtonName }
       </Button>
       <Menu
         id="fade-menu"
@@ -41,52 +44,32 @@ function NewSetMenuButton() {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={() => {
-          handleRedirect('Vocabulary');
-        }}
-        >
-          Vocabulary
+        {menuItems.map((item) => (
+          <MenuItem
+            key={item.menuItemName}
+            onClick={() => {
+              handleRedirect(item.path);
+            }}
+          >
+            { item.menuItemName }
 
-        </MenuItem>
-        <MenuItem onClick={() => {
-          handleRedirect('Value Set');
-        }}
-        >
-          Value Set
-
-        </MenuItem>
-        <MenuItem onClick={() => {
-          handleRedirect('Super Set');
-        }}
-        >
-          Super Set
-
-        </MenuItem>
-        <MenuItem onClick={() => {
-          handleRedirect('Concept');
-        }}
-        >
-          Concept
-
-        </MenuItem>
-        <MenuItem onClick={() => {
-          handleRedirect('Cohort');
-        }}
-        >
-          Cohort
-
-        </MenuItem>
-        <MenuItem onClick={() => {
-          handleRedirect('Variable');
-        }}
-        >
-          Variable
-
-        </MenuItem>
+          </MenuItem>
+        ))}
       </Menu>
 
     </>
   );
 }
 
-export default NewSetMenuButton;
+MenuButton.propTypes = {
+  menuButtonName: PropTypes.string,
+  menuItems: PropTypes.array,
+  variant: PropTypes.string,
+};
+MenuButton.defaultProps = {
+  menuButtonName: '',
+  menuItems: [{ menuItemName: '', path: '' }],
+  variant: '',
+};
+
+export default MenuButton;

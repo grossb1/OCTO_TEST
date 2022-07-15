@@ -138,7 +138,7 @@ const allSets = [
 const roles = [
   {
     roleName: 'Guest',
-    permissions: ['Dashboard ReadOnly', 'Library Module Read Only'],
+    permissions: ['Dashboard Read', 'Library Module Read'],
   },
   {
     roleName: 'Librarian', permissions: ['Dashboard Edit'],

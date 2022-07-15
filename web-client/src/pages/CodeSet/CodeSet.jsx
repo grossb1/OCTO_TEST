@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeSetDetails from '../components/CodeSetDetails';
+import CodeSetDetails from '../../components/CodeSetDetails';
 
 function CodeSet() {
   return (
