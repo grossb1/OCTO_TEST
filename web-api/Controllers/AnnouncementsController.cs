@@ -28,7 +28,7 @@ public class AnnouncementsController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetAnnouncements")]
+    [HttpGet(Name = "Announcements")]
     public IActionResult Get()
     {
         return Ok(Announcements);

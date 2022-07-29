@@ -19,7 +19,7 @@ public class RolesController : ControllerBase
                     new web_api.Models.DTO.Permission
                         { PermissionID = 1, PermissionName = "Dashboard Read"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 2, PermissionName = "Codeset Read"},
+                        { PermissionID = 2, PermissionName = "Set Read"},
                 },
         },
         new web_api.Models.DTO.Role 
@@ -32,7 +32,7 @@ public class RolesController : ControllerBase
                     new web_api.Models.DTO.Permission
                         { PermissionID = 3, PermissionName = "Dashboard Edit"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 4, PermissionName = "Codeset Edit"},
+                        { PermissionID = 4, PermissionName = "Set Edit"},
                 },
         },
         new web_api.Models.DTO.Role 
@@ -45,7 +45,7 @@ public class RolesController : ControllerBase
                     new web_api.Models.DTO.Permission
                         { PermissionID = 3, PermissionName = "Dashboard Edit"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 4, PermissionName = "Codeset Edit"},
+                        { PermissionID = 4, PermissionName = "Set Edit"},
                 },
         },
         new web_api.Models.DTO.Role 
@@ -58,7 +58,7 @@ public class RolesController : ControllerBase
                     new web_api.Models.DTO.Permission
                         { PermissionID = 3, PermissionName = "Dashboard Edit"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 4, PermissionName = "Codeset Edit"},
+                        { PermissionID = 4, PermissionName = "Set Edit"},
                 },
         },
         new web_api.Models.DTO.Role 
@@ -71,7 +71,7 @@ public class RolesController : ControllerBase
                     new web_api.Models.DTO.Permission
                         { PermissionID = 3, PermissionName = "Dashboard Edit"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 4, PermissionName = "Codeset Edit"},
+                        { PermissionID = 4, PermissionName = "Set Edit"},
                 },
         },
         new web_api.Models.DTO.Role 
@@ -84,11 +84,11 @@ public class RolesController : ControllerBase
                     new web_api.Models.DTO.Permission
                         { PermissionID = 3, PermissionName = "Dashboard Edit"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 4, PermissionName = "Codeset Edit"},
+                        { PermissionID = 4, PermissionName = "Set Edit"},
                     new web_api.Models.DTO.Permission
                         { PermissionID = 5, PermissionName = "Dashboard Delete"},
                     new web_api.Models.DTO.Permission
-                        { PermissionID = 6, PermissionName = "Codeset Delete"},
+                        { PermissionID = 6, PermissionName = "Set Delete"},
                 },
         }
     };

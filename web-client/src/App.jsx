@@ -12,7 +12,7 @@ import Concept from './pages/Concept';
 import UserGuide from './pages/UserGuide/UserGuide';
 import FAQ from './pages/FAQ/FAQ';
 import LibraryModule from './pages/LibraryModule/LibraryModule';
-import CodeSet from './pages/CodeSet/CodeSet';
+import Set from './pages/Set/Set';
 import Permissions from './pages/Permissions/Permissions';
 import Compare from './pages/Compare/Compare';
 import ManualRolesSelect from './components/ManualRolesSelect';
@@ -20,7 +20,7 @@ import GlobalContext from './contexts/GlobalContext';
 
 function App() {
   const [role, setRole] = useState({
-    roleID: 1, roleName: 'Guest', permissions: [{ permissionID: 1, permissionName: 'Dashboard Read' }, { permissionID: 2, permissionName: 'Codeset Read' }],
+    roleID: 1, roleName: 'Guest', permissions: [{ permissionID: 1, permissionName: 'Dashboard Read' }, { permissionID: 2, permissionName: 'Set Read' }],
   });
 
   const value = useMemo(() => ({
@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Dashboard />} />
           <Route path="/aboutalex" exact element={<About />} />
-          <Route path="/codeset" element={<CodeSet />} />
+          <Route path="/set" element={<Set />} />
           <Route path="/compare" element={<Compare />} />
           <Route path="/concept" element={<Concept />} />
           <Route path="/dashboard" exact element={<Dashboard />} />

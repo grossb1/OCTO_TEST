@@ -8,10 +8,10 @@ function CellDetails({ cell }) {
 
   function handleRedirect(_cell) {
     // console.log(_cell.row.original.guid);
-    if (_cell.row.original.datasetType === 'Concept') {
+    if (_cell.row.original.setType === 'Concept') {
       navigate('/concept');
-    } else if (_cell.row.original.datasetType === 'Value Set') {
-      navigate('/valueset');
+    } else if (_cell.row.original.setType === 'ValueSet' || _cell.row.original.setType === 'SuperSet') {
+      navigate('/set');
     } else { navigate('/dashboard'); }
   }
 

@@ -26,29 +26,17 @@ function Dashboard() {
 
   // value sets is default when opening page
   const getValueSets = async () => {
-    await axios.get('http://localhost:5117/valuesets').then((resp) => {
-      const data = resp.data.sort((a, b) => ((a.setTerm > b.setTerm) ? 1 : -1));
-      const newRows = [];
-      data.forEach((row) => {
-        newRows.push({
-          datasetType: 'Value Set', ...row,
-        });
-      });
-      setValueSets(newRows);
-      setFilteredRows(newRows);
+    await axios.get('http://localhost:5117/sets').then((resp) => {
+      const data = resp.data.sort((a, b) => ((a.name > b.name) ? 1 : -1));
+      setValueSets(data);
+      setFilteredRows(data);
     });
   };
 
   const getConcepts = async () => {
     await axios.get('http://localhost:5117/concepts').then((resp) => {
-      const data = resp.data.sort((a, b) => ((a.setTerm > b.setTerm) ? 1 : -1));
-      const newRows = [];
-      data.forEach((row) => {
-        newRows.push({
-          datasetType: 'Concept', ...row,
-        });
-      });
-      setConcepts(newRows);
+      const data = resp.data.sort((a, b) => ((a.name > b.name) ? 1 : -1));
+      setConcepts(data);
     });
   };
 
@@ -129,7 +117,7 @@ function Dashboard() {
           initialState={{
             showColumnFilters: false, showGlobalFilter: false, density: 'compact',
           }}
-          state={{ columnVisibility: { guid: false, datasetType: false } }}
+          state={{ columnVisibility: { guid: false, setType: false } }}
           enableColumnActions
           enableColumnFilters
           enablePagination={false}

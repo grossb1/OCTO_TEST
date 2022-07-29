@@ -62,7 +62,7 @@ function Header() {
           ))}
         </Box>
         <Typography>
-          Hi
+          Welcome
           {' '}
           {role.roleName}
           !

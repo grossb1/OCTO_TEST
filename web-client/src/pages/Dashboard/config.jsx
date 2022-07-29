@@ -8,11 +8,11 @@ export default [
     header: 'GUID',
   },
   {
-    accessorKey: 'datasetType',
-    header: 'datasetType',
+    accessorKey: 'setType',
+    header: 'setType',
   },
   {
-    accessorKey: 'setTerm',
+    accessorKey: 'name',
     header: 'Name',
     Cell: ({ cell }) => (
       <CellDetails cell={cell} />

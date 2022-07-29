@@ -7,72 +7,57 @@ namespace web_api.Controllers;
 [Route("[controller]")]
 public class ConceptsController : ControllerBase
 {
-    private static readonly Models.DTO.AllSets[] Concepts = new[]
+    private static readonly Models.DTO.Set[] Concepts = new[]
     {
-        new AllSets 
+        new Set
         {
             GUID = 2001,
-            SetTerm = "Concept7",
-            SetType = "Value Set",
-            Creator = "Amy",
-            Reviewer = "Cora",
-            SME = "John",
+            Name = "Concept7",
+            SetType = "Concept",
             Organization = "PRC",
             Description = "CLC",
             Status = "Working",
             Domain = "Tx_Inpat",
             Favorite = true,
         },
-        new AllSets
+        new Set
         {
             GUID = 2002,
-            SetTerm = "Concept2",
-            SetType = "Value Set",
-            Creator = "Amy",
-            Reviewer = "Jodie",
-            SME = "John",
+            Name = "Concept2",
+            SetType = "Concept",
             Organization = "SMITREC",
             Description = "Codes for depression per elix hauser",
             Status = "Development",
             Domain = "Diagnosis",
             Favorite = null,
         },
-        new AllSets
+        new Set
           {
             GUID = 2003,
-            SetTerm = "Concept9",
+            Name = "Concept9",
             SetType = "Concept",
-            Creator = "Susana",
-            Reviewer = "Rebecca",
-            SME = "John",
             Organization = "NEPEC",
             Description = "Codes for depression per elix hauser",
             Status = "Validated",
             Domain = "Medication",
             Favorite = null,
         },
-        new AllSets
+        new Set
         {
             GUID = 2004,
-            SetTerm = "Concept4",
-            SetType = "Value Set",
-            Creator = "David",
-            Reviewer = "Shalini",
-            SME = "Cora",
+            Name = "Concept4",
+            SetType = "Concept",
             Organization = "PERC",
             Description = "Possible something from the Ira files",
             Status = "Validated",
             Domain = "Tx_Outpat",
             Favorite = null,
         },
-        new AllSets
+        new Set
         {
             GUID = 2005,
-            SetTerm = "Concept16",
-            SetType = "Value Set",
-            Creator = "Shalini",
-            Reviewer = "David",
-            SME = "Rebecca",
+            Name = "Concept16",
+            SetType = "Concept",
             Organization = "PERC",
             Description = "Possible something from the Ira files",
             Status = "Validated",
